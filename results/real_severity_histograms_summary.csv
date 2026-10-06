@@ -1,0 +1,10 @@
+"study","disease","n_images","n_reference_sets","n_reference_measurements","min_severity","max_severity","median_severity","mean_severity"
+"alternaria_pecan","Pecan Alternaria black spot",35,1,35,4.1,85.6,40.4,40.7228571428571
+"canker_ripe_orange","Orange citrus canker",40,1,40,0.76,39.1,5.18,7.922575
+"coffee_leaf_rust","Coffee leaf rust",40,1,40,0.26,62.5,6.285,13.5935
+"tan_spot_wheat","Wheat tan spot",40,1,40,1.28,97.04,36.94,38.452
+"botrytis_gerbera","Gerbera gray mold",30,2,60,1,92,18.5,19.9833333333333
+"pecan_scab","Pecan fruit scab",40,1,40,0.95,84.24,10.86,20.07025
+"xylella_tobacco","Tobacco variegated chlorosis",50,1,50,0.54,68.92,28.695,29.5538
+"soybean_rust","Soybean Asian rust",50,1,50,0.25,84,37.37,39.0134
+"brown_spot","Rice brown spot",50,1,50,0.14,36.9,14.89,16.0454
