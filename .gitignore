@@ -1,0 +1,19 @@
+# Local recovery copies and validation libraries
+/_local_archive/
+
+# R session and IDE state
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+Rplots.pdf
+
+# Local publishing metadata
+rsconnect/
+
+# Operating-system and temporary document files
+desktop.ini
+Thumbs.db
+.DS_Store
+~$*
+*.tmp
