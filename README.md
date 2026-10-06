@@ -10,6 +10,3 @@ run commands, output descriptions, and interpretation.
 - Launch the application in R with `shiny::runApp("app.R")`.
 - Find plots in [figures/](figures/) and tables, data, and captions in [results_index2/](results_index2/).
 - After running the analysis, check the app with `Rscript tests/test_app.R`.
-
-The ignored `_local_archive/` folder contains recovery copies and older drafts.
-Exclude it from manual GitHub uploads.
