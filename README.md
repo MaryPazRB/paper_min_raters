@@ -255,39 +255,3 @@ All image and plot outputs are in [figures/](figures/).
 | [`supplementary_S2_qq_transformed.png`](figures/supplementary_S2_qq_transformed.png) | Combined transformed paired-difference Q-Q figure. |
 | [`real_severity_histograms.png`](figures/real_severity_histograms.png) | Reference-severity histograms; also supplied as TIFF and PDF. |
 | `app_example_run.jpg` / `app_example_settings.jpg` | Previously captured illustrations of the application. |
-
-### Reading the recommendations
-
-- `k_min_cv` is the precision-based minimum.
-- `k_power` is the paired-power requirement.
-- `k_final` is their maximum when both requirements can be estimated.
-- `baseline_ccc` uses complete interior pairs and may differ from `mu`, which uses all valid unaided raters.
-- `power_status` explains whether a power requirement could be calculated.
-- `NA` represents an unavailable or infeasible estimate, not zero.
-
-Match both `study` and `delta_ccc` when comparing sensitivity and bootstrap outputs. A result for an improvement of 0.05 must remain labeled as 0.05 if the primary 0.10 scenario is infeasible.
-
-## Assumptions and scope
-
-The planning estimates depend on the observed between-rater variation representing the future study population. The power calculation holds the observed transformed-difference standard deviation fixed across effects and excludes pairs with CCCs on the transformation boundaries.
-
-Q-Q plots and normality tests assess the observed differences; a non-significant normality test does not prove normality. Bootstrap sensitivity analyses resample whole paired rater differences **conditional on the observed specimens**. They do not resample specimens or establish performance for new specimens, recruitment patterns, learning effects, or dependent raters.
-
-Use these outputs as study-specific planning evidence, with the diagnostic and sensitivity results informing interpretation.
-
-## Check the application
-
-After running the main analysis:
-
-```sh
-Rscript tests/test_app.R
-```
-
-The checks compare the example's power calculation with the main analysis and exercise infeasible effects, boundary values, input validation, collected-pair counts, sequential stopping, and Shiny server behavior. They regenerate `results_index2/app_example_history.csv`; the JPG illustrations are not regenerated.
-
-## Preparing a GitHub upload
-
-Include the input datasets, scripts, tests, documentation, `figures/`, and `results/`. Keep `.gitignore` with the repository so local R session files and deployment metadata are excluded from normal Git operations.
-
-If you keep an `_local_archive/` recovery folder locally, leave it out of manual uploads. Git ignore rules do not apply to files selected through the GitHub web upload interface.
-
